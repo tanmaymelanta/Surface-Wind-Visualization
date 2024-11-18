@@ -26,3 +26,6 @@ A Python script to visualize and animate global surface wind patterns using GFS 
    ```bash
    python main.py
 4. The output GIF will be saved in the specified directory.
+
+## Sample File
+![](https://github.com/tanmaymelanta/Surface-Wind-Visualization/blob/main/surface_wind_speed.gif)
