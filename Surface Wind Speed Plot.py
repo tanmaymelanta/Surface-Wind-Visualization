@@ -51,7 +51,7 @@ def load_surface_wind_data(time_hour, ds):
     return wind_speed_df_pre, wind_speed_df, time_at_hour
 
 def plot_surface_wind(wind_speed_df_pre, wind_speed_df, time_at_hour, skip=10, min_wind_speed=10):
-    fig, ax = plt.subplots(figsize=(10, 3), dpi=300)    
+    fig, ax = plt.subplots(figsize=(7, 3), dpi=300)    
     m = Basemap(projection='cyl', llcrnrlat=-90, urcrnrlat=90, llcrnrlon=-180, urcrnrlon=240, resolution='h', ax=ax)
     m.drawcoastlines(linewidth=0.3)
     m.drawparallels(np.arange(-90., 91., 30.), labels=[1, 0, 0, 0], fontsize=4, linewidth=0.5)
@@ -107,9 +107,8 @@ def main():
     ds = get_dataset(url_base)
     if url_base:
         with imageio.get_writer(r"C:\Users\surface_wind_speed.gif", mode='I', duration=1000) as writer:
-            for i in range(0, 72, 3):
+            for i in range(0, 73, 3):
                 try:
-                    print(f"Processing hour {i}")
                     time_hour = i
                     wind_speed_df_pre, wind_speed_df, time_at_hour = load_surface_wind_data(time_hour, ds)
                     fig = plot_surface_wind(wind_speed_df_pre, wind_speed_df, time_at_hour)
@@ -120,7 +119,7 @@ def main():
                     writer.append_data(image)
                     plt.close(fig)
                 except Exception as e:
-                    print(f"Error processing hour {i}: {e}")
+                    print(f"Error processing report {i}: {e}")
                     continue
 
 if __name__ == "__main__":
