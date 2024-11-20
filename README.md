@@ -1,6 +1,9 @@
 # Surface Wind Visualization
 A Python script to visualize and animate global surface wind patterns using GFS weather model data.
 
+## Data Source
+This project relies on the NOAA/NCEP GFS weather model data, which is publicly available and provided by the National Oceanic and Atmospheric Administration (NOAA).
+
 ## Features
 - Fetches and processes wind speed and direction data from NOAA's GFS.
 - Visualizes surface wind patterns with a map overlay.
