@@ -12,9 +12,13 @@ warnings.filterwarnings("ignore")
 
 def get_url_base():
     url_string = [
+        (dt.date.today()).strftime("%Y%m%d") + "/gfs_0p25_1hr_18z", (dt.date.today()).strftime("%Y%m%d") + "/gfs_0p25_1hr_18z",
         (dt.date.today()).strftime("%Y%m%d") + "/gfs_0p25_1hr_18z", (dt.date.today()).strftime("%Y%m%d") + "/gfs_0p25_1hr_12z",
+        (dt.date.today()).strftime("%Y%m%d") + "/gfs_0p25_1hr_18z", (dt.date.today()).strftime("%Y%m%d") + "/gfs_0p25_1hr_06z"
         (dt.date.today()).strftime("%Y%m%d") + "/gfs_0p25_1hr_06z", (dt.date.today()).strftime("%Y%m%d") + "/gfs_0p25_1hr_00z",
+        (dt.date.today() - timedelta(days=1)).strftime("%Y%m%d") + "/gfs_0p25_1hr_18z", (dt.date.today() - timedelta(days=1)).strftime("%Y%m%d") + "/gfs_0p25_1hr_18z",
         (dt.date.today() - timedelta(days=1)).strftime("%Y%m%d") + "/gfs_0p25_1hr_18z", (dt.date.today() - timedelta(days=1)).strftime("%Y%m%d") + "/gfs_0p25_1hr_12z",
+        (dt.date.today() - timedelta(days=1)).strftime("%Y%m%d") + "/gfs_0p25_1hr_18z", (dt.date.today() - timedelta(days=1)).strftime("%Y%m%d") + "/gfs_0p25_1hr_06z",
         (dt.date.today() - timedelta(days=1)).strftime("%Y%m%d") + "/gfs_0p25_1hr_06z", (dt.date.today() - timedelta(days=1)).strftime("%Y%m%d") + "/gfs_0p25_1hr_00z"
     ]
     for url_base in url_string:
